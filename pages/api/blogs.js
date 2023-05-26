@@ -5,14 +5,18 @@ export default function handler(req, res) {
     if(err) {
       res.status(500).json({Error: "Internal server error"})
     }
+    // console.log(req.query.count)
+    const totalLength = data.length
+    const lessdata = data.slice(0,req.query.count)
     // console.log(JSON.parse(data))
+    // console.log(lessdata)
     const blogObj = []
-    data.forEach((blogPage)=> {
+    lessdata.forEach((blogPage)=> {
         // console.log(blogPage)
         const newBlog = fs.readFileSync(`blogdata/${blogPage}`,'utf-8')
         blogObj.push(JSON.parse(newBlog))
     })
     // console.log(blogObj)
-    res.status(200).json(blogObj)
+    res.status(200).json({blogObj,totalLength})
   })
 }

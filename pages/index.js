@@ -8,15 +8,15 @@ export async function getServerSideProps(context) {
  
   const response = await fetch('http://localhost:3000/api/blogs')
   let data = await response.json()
-  // console.log(data)
+  console.log(data)
   // getBlogs(data)
-  data = data.slice(0,3)
+  const blogs = data.blogObj.slice(0,3)
 
-return { props: { data } };
+return { props: { blogs } };
 };
 
 export default function Home(props) {
-  const [blogs, getBlogs] = useState(props.data)
+  const [blogs, getBlogs] = useState(props.blogs)
   // const fetchBlogs = async () => {
   //   const response = await fetch('http://localhost:3000/api/blogs')
   //   const data = await response.json()
@@ -60,7 +60,7 @@ export default function Home(props) {
           <div className={styles.blogs}>
             {
               blogs ? blogs.map((el, index) => {
-                return <Link href={`/blogpost/${el.slug}`} className={styles.blog}>
+                return <Link href={`/blogpost/${el.slug}`} className={styles.blog} key={el.slug}>
                   <h3 className="blogTitle">
                     {el.title}
                   </h3>

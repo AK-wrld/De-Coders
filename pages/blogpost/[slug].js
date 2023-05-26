@@ -33,7 +33,7 @@ const slug = (props) => {
 }
 export async function getServerSideProps(context) {
 //  context object contains a query or a params which contains our slug. can use both contxt.params or context.query
-console.log(context)
+// console.log(context)
   const {slug} = context.query
   
   const response= await fetch(`http://localhost:3000/api/getblogs?slug=${slug}`)
