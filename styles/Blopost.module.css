@@ -1,0 +1,14 @@
+.main {
+    width:80%;
+    min-height:100vh;
+    margin:auto ;
+}
+.title {
+    padding: 60px 0px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+.content {
+    padding-top: 20px;
+}   

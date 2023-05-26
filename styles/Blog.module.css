@@ -1,0 +1,25 @@
+.blogs {
+    display: flex;
+    width: 79%;
+    padding-top: 4rem;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+.card {
+   cursor: pointer;
+    width: 30%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.card:hover {
+  background-color: #35ff3026;
+  transition: background-color 0.5s;
+}
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: inherit;
+}

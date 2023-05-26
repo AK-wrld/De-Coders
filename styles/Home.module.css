@@ -1,15 +1,13 @@
-.container {
-  padding: 0 2rem;
-}
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
+  min-height: 75vh;
+  padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* padding-bottom: 11rem; */
 }
 
 .footer {
@@ -51,7 +49,7 @@
 }
 
 .description {
-  margin: 4rem 0;
+  margin: 3rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -126,4 +124,48 @@
   .logo img {
     filter: invert(1);
   }
+}
+.nav {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+
+}
+.nav li {
+  color: white;
+  list-style: none;
+  cursor: pointer;
+}
+.nav li:hover {
+  color:#111;
+  background-color: white;
+  transition: all 0.4s;
+}
+.mainNav {
+  width: 30%;
+  height: 7vh;
+  background-color: #111;
+  margin: auto;
+}
+.blogs {
+  display: flex;
+  width: 79%;
+  padding-top: 4rem;
+  cursor: pointer;
+  justify-content: space-around;
+}
+#myImg {
+  border-radius:10px;
+}
+.blog {
+  width: 30%;
+  height: 15vh;
+  border-radius: 10px;
+}
+.blog:hover {
+  background-color: #35ff3026;
+  transition: background-color 0.5s;
 }
